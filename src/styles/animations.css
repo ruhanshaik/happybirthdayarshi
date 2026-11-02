@@ -1,0 +1,42 @@
+@keyframes float-up { 0% { transform: translateY(0) scale(.8); opacity: 0 } 15% { opacity: .9 } 100% { transform: translateY(-110vh) scale(1.1); opacity: 0 } }
+@keyframes fall { 0% { transform: translate3d(0,-10vh,0) rotate(0); opacity: 0 } 10% { opacity: 1 } 100% { transform: translate3d(var(--dx,30px),110vh,0) rotate(540deg); opacity: .9 } }
+@keyframes twinkle { 0%,100% { opacity: .12; transform: scale(.45) } 45% { opacity: 1; transform: scale(1.3) } 60% { opacity: .85; transform: scale(1.1) } }
+@keyframes breathe { 0%,100% { transform: scale(1) } 50% { transform: scale(1.03) translateY(-2px) } }
+@keyframes tilt { 0%,100% { transform: rotate(-2deg) } 50% { transform: rotate(3deg) } }
+@keyframes blink { 0%,92%,100% { transform: scaleY(1) } 95% { transform: scaleY(.1) } }
+@keyframes wave { 0%,100% { transform: rotate(0) } 50% { transform: rotate(-22deg) } }
+@keyframes bounce-soft { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+@keyframes flicker { 0%,100% { transform: scale(1,1) rotate(-2deg); opacity: 1 } 30% { transform: scale(.9,1.12) rotate(2deg); opacity: .9 } 60% { transform: scale(1.05,.95) rotate(-1deg) } }
+@keyframes shimmer { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+@keyframes glow-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(217,130,155,.45) } 50% { box-shadow: 0 0 0 10px rgba(217,130,155,0) } }
+@keyframes drift { 0%,100% { transform: translate(0,0) } 50% { transform: translate(14px,-18px) } }
+@keyframes flutter { 0%,100% { transform: translate(0,0) rotate(0) } 25% { transform: translate(30px,-20px) rotate(10deg) } 50% { transform: translate(60px,4px) rotate(-6deg) } 75% { transform: translate(24px,18px) rotate(8deg) } }
+@keyframes sway { 0%,100% { transform: rotate(-3deg) } 50% { transform: rotate(3deg) } }
+@keyframes dust { 0%,100% { transform: translate(0,0); opacity: .2 } 50% { transform: translate(10px,-24px); opacity: .9 } }
+
+.anim-float-up { animation: float-up var(--d,9s) linear infinite; }
+.anim-fall { animation: fall var(--d,10s) linear infinite; }
+.anim-twinkle { animation: twinkle var(--d,3s) ease-in-out infinite; }
+.anim-breathe { animation: breathe 4s ease-in-out infinite; transform-origin: 50% 100%; }
+.anim-tilt { animation: tilt 5s ease-in-out infinite; transform-origin: 50% 90%; }
+.anim-blink { animation: blink 4.5s infinite; transform-box: fill-box; transform-origin: center; }
+.anim-wave { animation: wave 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 80% 90%; }
+.anim-bounce { animation: bounce-soft 2.4s ease-in-out infinite; }
+.anim-flicker { animation: flicker .9s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 90%; }
+.anim-glow { animation: glow-pulse 2.4s ease-out infinite; }
+.anim-drift { animation: drift var(--d,8s) ease-in-out infinite; }
+.anim-flutter { animation: flutter var(--d,9s) ease-in-out infinite alternate; }
+.anim-sway { animation: sway 4s ease-in-out infinite; transform-origin: 50% 100%; }
+.anim-dust { animation: dust var(--d,7s) ease-in-out infinite; }
+
+
+@keyframes bearWave { 0%,100% { transform: rotate(0deg) } 20% { transform: rotate(20deg) } 40% { transform: rotate(-8deg) } 60% { transform: rotate(18deg) } 80% { transform: rotate(-4deg) } }
+.bear-wave { animation: bearWave 1.4s ease-in-out infinite; }
+@keyframes earWiggle { 0%,88%,100% { transform: rotate(0) } 92% { transform: rotate(-6deg) } 96% { transform: rotate(5deg) } }
+.bear-ear { animation: earWiggle 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 90%; }
+@keyframes shoot { 0% { transform: translate(0,0) rotate(145deg); opacity: 0 } 3% { opacity: 1 } 12% { transform: translate(-280px,196px) rotate(145deg); opacity: 0 } 100% { transform: translate(-280px,196px) rotate(145deg); opacity: 0 } }
+.shoot { position: absolute; width: 90px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, rgba(255,255,255,0), #fff); box-shadow: 0 0 8px #fff; animation: shoot var(--d,8s) linear infinite; }
+@keyframes bokeh { 0%,100% { transform: translate(0,0) scale(1); opacity: .35 } 50% { transform: translate(24px,-34px) scale(1.25); opacity: .7 } }
+.anim-bokeh { animation: bokeh var(--d,12s) ease-in-out infinite; }
+@keyframes fingerSwipe { 0% { transform: translate(-50%, 0) scale(1); opacity: 0 } 10% { opacity: 1 } 70% { transform: translate(-50%, 130px) scale(.92); opacity: 1 } 100% { transform: translate(-50%, 150px) scale(.92); opacity: 0 } }
+.anim-finger { animation: fingerSwipe 2.2s ease-in-out infinite; }
